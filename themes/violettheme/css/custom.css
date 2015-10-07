@@ -1,0 +1,31 @@
+.grid {
+	padding: 0px 0px; 
+	clear: both;
+	border: 35px solid red;
+	width:1216px;
+	height: 900px
+}
+
+.grid li.ban1{
+	width :22px;
+	display: inline-block;
+	 padding: 0 1px;
+}
+
+.grid li.ban2{
+	width :20px;
+	display: inline-block;
+	 padding: 0 0px;
+}
+
+.grid li.ban3{
+	width :20px;
+	display: inline-block;
+	 padding: 0 0px;
+}
+
+.grid li.ban4{
+	width :20px;
+	display: inline-block;
+	 padding: 0 1px;
+}
