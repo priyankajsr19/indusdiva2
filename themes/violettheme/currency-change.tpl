@@ -1,7 +1,7 @@
 <div style="float:left">
     {section name=currency loop=$currencies}
         {if $currencies[currency].id_currency eq $cookie->id_currency}
-            <span id="currhead">My currency :</span>
+           <!--  <span id="currhead">My currency :</span> -->
             <span id="currimg">{$currencies[currency].sign}</span>
             <span id="currtext">{$currencies[currency].iso_code}</span>
             <span> | </span>

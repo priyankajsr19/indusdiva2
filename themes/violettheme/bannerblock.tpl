@@ -32,6 +32,31 @@ $(function() {
 
 {assign var=counter value=1}
 <ul class="rslides">
+	{section loop=$home_banners name=banner}
+        {if $counter eq 1}
+                <li>
+                        <a class="banner_big" href="indusdiva.local/2-sarees">
+                                <img src="/imageN/banner.png" alt="{$home_banners[banner].title}"  style="max-width:100%; width:100% auto;"/>
+                        </a>
+                </li>
+        {else}
+                <li>
+                        <a class="banner_big" href="indusdiva.local/2-sarees">
+                                <img data-href="/imageN/banner.png" alt="{$home_banners[banner].title}" class="lazy2"  style="max-width:100%; width:100% auto;"/>
+                                <noscript>
+                                	<img src="/imageN/banner.png" alt="{$home_banners[banner].title}"  style="max-width:100%; width:100% auto;"/>
+                                </noscript>
+                        </a>
+                </li>
+        {/if}
+        {assign var=counter value=$counter+1}
+{/section}
+</ul>	
+
+
+
+{* commentedN
+<ul class="rslides">
 {section loop=$home_banners name=banner}
         {if $counter eq 1}
                 <li>
@@ -52,6 +77,6 @@ $(function() {
         {assign var=counter value=$counter+1}
 {/section}
 </ul>
-
+*}
 <!-- /MODULE Block banners -->
 {/if}

@@ -17,32 +17,20 @@
 		<a href="#shipping-charges" class="shipping_link span_link">FREE SHIPPING OVER US $100</a>
 	</span>
 </div> *}
-    
-    <div id="grid">
-    <ul>
-    	<li id="ban1">
-    		<a href ="{$base_dir}513-menswear">
-    	        <img src="{$img_ps_dir}banners/Menswear_Bottom_20132811.jpg" alt="Indusdiva Menswear Collection">
-			</a>
-    	</li>
-    	<li id="ban2">
-    		<a href ="{$base_dir}513-menswear">
-    	        <img src="{$img_ps_dir}banners/Menswear_Bottom_20132811.jpg" alt="Indusdiva Menswear Collection">
-			</a>
-    	</li>
-    	<li id="ban3">
-    		<a href ="{$base_dir}513-menswear">
-    	        <img src="{$img_ps_dir}banners/Menswear_Bottom_20132811.jpg" alt="Indusdiva Menswear Collection">
-			</a>
-    	</li>
-    	<li id="ban4">
-    		<a href ="{$base_dir}513-menswear">
-    	        <img src="{$img_ps_dir}banners/Menswear_Bottom_20132811.jpg" alt="Indusdiva Menswear Collection">
-			</a>
-    	</li>
-    </ul>
-
-    </div>
+    <div class ="wrapper">
+      <div class ="img-container">
+            <a href="http://indusdiva.local/2-sarees"><span id="img1"><img class="img img1" src="imageN/1.png"></span></a>
+            <a href="http://indusdiva.local/2-sarees"><span id="img2"><img class="img" src="imageN/7.png"></span></a>
+            <a href="http://indusdiva.local/5-lehenga"><span id="img3"><img class="img" src="imageN/2.png"></span> </a> 
+            <a href="http://indusdiva.local/5-lehenga"><span id="img4"><img class="img" src="imageN/lehanga.png"></span></a>
+            <a href="http://indusdiva.local/3-salwar-kameez"><span id="img5"><img class="img" src="imageN/salwar-kurti.png"></span></a>
+            <a href="http://indusdiva.local/3-salwar-kameez"><span id="img6"><img class="img" src="imageN/3.png"></span></a>
+            <a href="http://indusdiva.local/1190-accessories"><span id="img7"><img class="img img7" src="imageN/4.png"></span></a>
+            <a href=""><span id="img8"><img class="img img8" src="imageN/5.png"></span></a>
+            <a href="http://indusdiva.local/1190-accessories"><span id="img9"><img class="img" src="imageN/9.png"></span></a>
+      </div>
+   
+  </div><!--wrapper-->
 {* Ncommented--
 	<div style="padding: 10px 0; clear: both">
 	<ul>

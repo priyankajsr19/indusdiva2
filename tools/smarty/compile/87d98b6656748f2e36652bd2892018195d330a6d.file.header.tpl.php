@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2015-10-07 13:42:38
+<?php /* Smarty version Smarty-3.0.7, created on 2015-10-07 14:49:36
          compiled from "C:\xampp\htdocs\indusdiva2/modules/ganalytics/header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:73765614d3f68654e5-03670525%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:185805614e3a87fcae5-11483160%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '73765614d3f68654e5-03670525',
+  'nocache_hash' => '185805614e3a87fcae5-11483160',
   'function' => 
   array (
   ),

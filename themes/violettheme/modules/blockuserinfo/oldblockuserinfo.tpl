@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{$lang_iso}">
     <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# indusdiva: http://ogp.me/ns/fb/indusdiva#">
         <title>{$meta_title|escape:'htmlall':'UTF-8'}</title>
@@ -35,7 +35,7 @@
                 <link rel="prev" href="{$paginationBaseUrl}{$link->goPage($requestPage, $p_previous)}" />
             {/if}
         {/if}
-        <meta property="og:site_name" content="indusdiva.com"/>
+    <meta property="og:site_name" content="indusdiva.com"/>
 
         <meta name="robots" content="{if isset($nobots)}no{/if}index,follow" />
         <link rel="icon" type="image/vnd.microsoft.icon" href="{$img_ps_dir}favicon.ico?{$img_update_time}" />
@@ -61,7 +61,7 @@
                 <script type="text/javascript" src="{$js_uri}"></script>
             {/foreach}
         {/if}
-        <script type="text/javascript">
+    <script type="text/javascript">
             $(document).ready(function() {
                 $('.login_link').fancybox({
                     autoSize: true
@@ -89,30 +89,54 @@
                     <p>{l s='You cannot place a new order from your country.'} <span class="bold">{$geolocation_country}</span></p>
                 </div>
             {/if}
-           
-		  
-                <div style="width:1170px;margin:auto;" class="clearfix">
+            <div id="header" style="width:100%;">
+                <div style="background:#ededed; border-bottom:1px solid #c9c9c9;height:25px;">
+                    <div id="header_user_info" class="clearfix" style="width:980px; margin:auto;color:#000000;">
+                        <div style="position:relative; display: block; text-align: left; width: 300px;float:left">care@indusdiva.com | +91-80-67309079 (24x7)</div>
+                        <div style="position:relative; display: block; text-align: right; width: 660px; float:right">
+                            {<span style="font-size:13px;">{$current_country} | </span>}
+                            {*{if isset($balance_points) && $balance_points > 0}
+                            <a rel="nofollow" href="{$base_dir_ssl}vcoins.php">
+                            <span class="span_link" style="color:#000000;">{$balance_points} Coins |</span>
+                            </a>
+                            {/if}*}
+                            {include file="$tpl_dir./currency-change.tpl"}    
+                            {if $cookie->isLogged()}
+                                <a rel="nofollow" href="{$link->getPageLink('idpoints.php', true)}" title="{l s='My ClubDiva Coins'}">{$balance_points} Coins</a> 
+                                |
+                                <a rel="nofollow" href="{$link->getPageLink('history.php', true)}" title="{l s='Your Account' mod='blockuserinfo'}">{l s='My Account' mod='blockuserinfo'}</a> 
+                                | 
+                                <span>{$cookie->customer_firstname|escape:'htmlall':'UTF-8'} {$cookie->customer_lastname|escape:'htmlall':'UTF-8'}</span>
+                                (<a rel="nofollow" href="{$link->getPageLink('index.php')}?mylogout" title="{l s='Log me out' mod='blockuserinfo'}">{l s='Log out' mod='blockuserinfo'}</a>)
+
+                            {else}
+                                {if $page_name!='authentication'}
+                                    <a rel="nofollow" id="login_link" class="fancybox login_link" href="#login_modal_panel">{l s='Log in | Signup' mod='blockuserinfo'}</a>
+                                {/if}
+                            {/if}
+                        </div>
+                    </div>
+                </div>
+            
+  {include file="$tpl_dir./currency-menu.tpl"}    
+                <div style="width:980px;margin:auto;" class="clearfix">
                     <div id="header_right" class="clearfix">
                         <div id="header_logo" style="padding-top:20px;">
-                            {* <a  href="{$base_dir}" title="{$shop_name|escape:'htmlall':'UTF-8'}" id="logo_link" style="background: url(http://cdn.indusdiva.com/img/divalogo.png) 0px 0px no-repeat scroll transparent;">
-                            </a> *}
-                            <a  href = "{$base_dir}" title="{$shop_name|escape:'htmlall':'UTF-8'}" ><img src="imageN/logo.png" width="220px"></a>
-                            
+                            <a  href="{$base_dir}" title="{$shop_name|escape:'htmlall':'UTF-8'}" id="logo_link" style="background: url(http://cdn.indusdiva.com/img/divalogo.png) 0px 0px no-repeat scroll transparent;">
+                            </a>
                         </div>
                         {$HOOK_TOP}
                     </div>
-                    {include file="$tpl_dir./currency-menu.tpl"} 
                 </div>
                 {include file="$tpl_dir./categoriesbar.tpl"}
                 {include file="$tpl_dir./bannerblock.tpl"}
-                {* Ncommented--
+                {*
                 <div id="feedback-button-panel" style="position:fixed;right:0px; top:250px;">
                 <a rel="nofollow" id="feedback_button" href="#feedback-panel" style="cursor: pointer"><img src="{$img_ps_dir}feedback1.png" alt="feedback" /></a>
                 </div>
-                
                 <div id="feedback-button-panel" style="position:fixed;right:0px; top:250px;z-index:100000">
                 <a href="./help-an-orphan"><img src="{$img_ps_dir}gift-box-re.gif" alt="Gift a box" width="140px"/></a>
-		</div> *}
+  </div>*}
             </div>
             <div id="page" style="clear:both;padding-top:10px;" clear="clearfix">
 

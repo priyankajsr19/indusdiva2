@@ -25,6 +25,7 @@ html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pr
 }
  
 .clearfix {
+	/*width: 80px;*/
 	display: inline-block;
 }
  
@@ -267,7 +268,7 @@ h4 { font-size: 1em }
 
 /* global layout */
 #page {
-	width: 980px;
+	width: 1200px;
 	margin: 0 auto;
 	text-align: left
 }
@@ -280,10 +281,13 @@ img.logo {
 	float: left;
 	font-size: 2em;
 	font-weight: bold
+	
 }
 #header_right {
 	float: left;
 	width:100%;
+	
+	
 }
 #left_column, #center_column, #right_column { float: left }
 #left_column {
@@ -1463,7 +1467,7 @@ ul.shop_info li {
 
 /* Printable version */
 @media print {
-	div#left_column, div#right_column, div#footer, a.button, span.button , .button, ul#usefull_link_block, div#header_user, #languages_block_top, #search_block_top, #currencies_block_top, ul#header_links, ul.idTabs, #availability_statut br {
+	div#left_column, div#right_column, div#footer, a.button, span.button , .button, ul#usefull_link_block, div#header_user1, #languages_block_top, #search_block_top, #currencies_block_top, ul#header_links, ul.idTabs, #availability_statut br {
 		display: none
 	}
 	div#center_column { width: 100% }
@@ -1665,7 +1669,7 @@ div.star_hover a, div.star a:hover { background-position: 0 -32px }
 
 /* Custome styles */
 .footer {
-    background: none repeat scroll 0 0 #F2F2F2 !important;
+    background: none repeat scroll 0 0 #FFFFFF !important;
     border-radius: 5px 5px 0px 0px;
     box-shadow: 0 0 3px #A8A8A8;
     clear: both;
@@ -1751,6 +1755,10 @@ box-shadow: 6px 3px 5px #c1b0c6;
 }
 
 #header_user_info a:hover{
+	text-decoration:underline;
+}
+
+#curtxt a:hover{
 	text-decoration:underline;
 }
 
@@ -2762,45 +2770,53 @@ div.myaccount .block_content { background: #f6dce8 url('../../../img/block_bg_my
 .account_input { margin-left: 0; width: 15em; height:25px; font-size:14px; }
 
 /* block top user information */
-#header_right #header_user {
-    float: right;
-    margin-top: 21px;
+#header_right #header_user1 {
+    /*float: right;*/
+    margin-top: 5px;
     position: relative;
-    text-align: right;
-    width: 150px;
+    /*text-align: right;*/
+    width: 358px;
     z-index: 100;
     height:36px;
+    margin: 0px 608px;
 }
 
-#header_user p, #header_user a { color: #3c3c3c; }
-#header_user span { font-weight: bold }
-#header_user #header_nav { position:relative; display:inline-flex; margin-left: -131px}
-#header_user li {
+#tepnew
+{
+width: 240px;
+height: 240px;
+
+}
+
+#header_user1 p, #header_user1 a { color: #3c3c3c; }
+#header_user1 span { font-weight: bold }
+#header_user1 #header_nav { position:relative; display:inline-flex; margin-left: -131px}
+#header_user1 li {
 	float: right;
 	line-height: 2em;
 	margin-left: 0.5em;
 	white-space: nowrap
 }
-#header_user #shopping_cart, #header_user #your_account { font-size: 0.9em }
-#header_user li#your_account { margin-left: 0 }
-#header_user #shopping_cart a, #header_user #your_account a {
+#header_user1 #shopping_cart, #header_user1 #your_account { font-size: 0.9em }
+#header_user1 li#your_account { margin-left: 0 }
+#header_user1 #shopping_cart a, #header_user1 #your_account a {
 	background-repeat: no-repeat;
 	background-position: top left;
 	padding: 2px 0 4px 26px;
 	height: 20px;
 	text-decoration: none
 }
-#header_user #shopping-bag a {display:block; height:36px; color: #333333; text-decoration: none; float:right;}
-#header_user #shopping-bag a img {float:left;}
-#header_user #your_account a { background-image: url('../img/icon/my-account.gif') }
-#header_user span {
+#header_user1 #shopping-bag a {display:block; height:36px; color: #333333; text-decoration: none; float:right;}
+#header_user1 #shopping-bag a img {float:left;}
+#header_user1 #your_account a { background-image: url('../img/icon/my-account.gif') }
+#header_user1 span {
     display: block;
     float: left;
     font-weight: bold;
     text-align: center;
 }
 
-#header_user a span {width:30px;padding-left:2px;}
+#header_user1 a span {width:30px;padding-left:2px;}
 .ajax_cart_quantity {
     font-size: 21px;
 	margin-top:4px;
@@ -3158,9 +3174,9 @@ td.measurement_middle{
   position: relative;
   list-style: none;
   overflow: hidden;
-  width: 100%;
+  width: 89.5%;
   padding: 0;
-  margin: 0;
+  margin: auto;
   border-bottom:2px solid #000000;
   border-top:2px solid #000000;
   }
@@ -3191,7 +3207,7 @@ td.measurement_middle{
 position: absolute;
 -webkit-tap-highlight-color: rgba(0,0,0,0);
 top: 52%;
-left: 0;
+left: 45px;
 opacity: 0.7;
 z-index: 3;
 text-indent: -9999px;
@@ -3206,7 +3222,7 @@ margin-top: -45px;
 .rslides_nav.next {
 left: auto;
 background-position: right top;
-right: 0;
+right: 45px;
 }
 
 .scroll {
@@ -3261,7 +3277,8 @@ right: 0;
 }
 /*currency menu css*/
 #curr_menu {
-    display:none;
+	clear: both;
+    
     width:980px;
     margin:0px auto;
     border:1px solid #CCC;
@@ -3410,8 +3427,11 @@ right: 0;
    max-width:110px;
    overflow:hidden;
    height:18px;
-   text-align: center;
+   text-align: left;
 }
+
+
+
 .salebtn {
    border-top: 1px solid #a32413;
    background: #a32413;
@@ -3688,34 +3708,38 @@ right: 0;
   width:380px;
 }
 
-#grid {
-	padding: 0px 0px; 
-	clear: both;
-	width:1000px;
-	height: 900px;
-	border:5px solid red;
+
+
+.wrapper {
+width: 95%;
+margin: auto;
+overflow: hidden;
 }
 
-#grid li.ban1{
-	width :22px;
-	display: inline-block;
-	 padding: 0 1px;
+img {
+max-width: 100%;
 }
 
-#grid li.ban2{
-	width :20px;
-	display: inline-block;
-	 padding: 0 0px;
+.img-container {
+width: 100%;
+overflow: hidden;
 }
 
-#grid li.ban3{
-	width :20px;
-	display: inline-block;
-	 padding: 0 0px;
+.img {
+width: 24.78%;
+height: 200px;
+float: left;
+padding: 1px;
 }
 
-#grid li.ban4{
-	width :20px;
-	display: inline-block;
-	 padding: 0 1px;
+.img1 {
+height: 402px;
+}
+.img7 {
+height: 402px;
+float: right;
+}
+
+.img8 {
+width: 49.8%;
 }

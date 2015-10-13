@@ -10,9 +10,10 @@
 
 </div>
 *}
+
 <!--a href="/products/blackfridayfinal" style="float:left; width:50px;" class="salebtn">SALE</a-->
-<div id="header_user">
-{*
+ <div id="header_user1">
+
 	 {literal} 
 		<script type="text/javascript">
 
@@ -85,7 +86,7 @@
        			     sensitivity: 1,
        			     interval:100
        			};
-	            $("#header_user").hoverIntent(config);
+	            $("#shopping-right").hoverIntent(config);
 	            config = {    
 	       			     over: function(e){
 		       					id=$(this).attr('rel');
@@ -105,13 +106,14 @@
 		</script>
 		
 	{/literal}
-*}	
+	
 	<div id="header_nav" class="clearfix"  >
+		<div id="shopping-right"> 
 		<div id="shopping-bag" class="clearfix" style="float:right">
 		{*<div style="text-align: right; float: left; padding-top: 11px;color:#939393">YOUR<br/>SHOPPING BAG</div>*}
 		{if !$PS_CATALOG_MODE}
 			<a rel="nofollow" id="lnk_shopping_bag" class="lnk_shopping_bag" href="{$link->getPageLink("$order_process.php", true)}" >
-				<div style="width:80px" class="clearfix">
+				<div  class="clearfix">
 					<div class="sbagtxt">
 						MY BAG {if $cart_qties > 0}({$cart_qties}){/if}
 					</div>
@@ -120,57 +122,79 @@
 			</a>
 		{/if}
 		</div>
-		<div id="wish" class="clearfix" style="float:right">
-		{*<div style="text-align: right; float: left; padding-top: 11px;color:#939393">YOUR<br/>SHOPPING BAG</div>*}
-		{if !$PS_CATALOG_MODE}
-			<a rel="nofollow" id="lnk_shopping_bag" class="lnk_shopping_bag" href="{$link->getPageLink("$order_process.php", true)}" >
+	</div>
+		<!-- <div id="wish" class="clearfix" style="float:right">
+		
+		
+			<a rel="nofollow1" id="" class="" href="" >
 				<div style="width:80px" class="clearfix">
-					<div class="sbagtxt">
-						WISH LIST {if $cart_qties > 0}({$cart_qties}){/if}
+					<div class="wishtxt">
+						WISH LIST
 					</div>
 					<img alt="Wish List" sytle="float:right" src="imageN/wish.png" width="24px" height="35px"/>
 				</div>
 			</a>
-		{/if}
-		</div>
-		<div id="curr" class="clearfix" style="float:right">
-		{*<div style="text-align: right; float: left; padding-top: 11px;color:#939393">YOUR<br/>SHOPPING BAG</div>*}
-		{if !$PS_CATALOG_MODE}
-			<a rel="nofollow" id="lnk_shopping_bag" class="lnk_shopping_bag" href="{$link->getPageLink("$order_process.php", true)}" >
+	
+		</div> -->
+		
+
+		<div id="curtxt">
+			 {include file="$tpl_dir./currency-change.tpl"}
+			 
+			 		</div>
+<!-- 		<div id="curr" class="clearfix" style="float:right">
+		
+		
+			<a rel="nofollow" id="lnk_shopping_bag" class="lnk_shopping_bag" href="" >
 				<div style="width:80px" class="clearfix">
 					<div class="sbagtxt">
-						INR {if $cart_qties > 0}({$cart_qties}){/if}
+					MY CURRENCY
 					</div>
 					<img alt="currency" sytle="float:right" src="imageN/india.png" width="24px" height="35px"/>
 				</div>
 			</a>
-		{/if}
-		</div>
+		
+		</div> -->
 		<div id="my-acnt" class="clearfix" style="float:right">
-		{*<div style="text-align: right; float: left; padding-top: 11px;color:#939393">YOUR<br/>SHOPPING BAG</div>*}
-		{if !$PS_CATALOG_MODE}
-			<a rel="nofollow" id="lnk_shopping_bag" class="lnk_shopping_bag" href="{$link->getPageLink("$order_process.php", true)}" >
+		
+		
+			<a rel="nofollow" id="" class="" href="" >
 				<div style="width:80px" class="clearfix">
-					<div class="sbagtxt">
-						MY ACCOUNT {if $cart_qties > 0}({$cart_qties}){/if}
-					</div>
-					<img alt="my account" sytle="float:right" src="imageN/my-acnt.png" width="24px" height="35px"/>
+					<!-- <div class="sbagtxt">
+						LogIn/signUp
+					</div> -->
+					<!-- <a rel="nofollow" id="login_link" class="fancybox login_link" href="#login_modal_panel">Log in | Signup</a> -->
+					{if $cookie->isLogged()}
+                                <a rel="nofollow" href="{$link->getPageLink('idpoints.php', true)}" title="{l s='My ClubDiva Coins'}">{$balance_points} Coins</a> 
+                                |
+                                <a rel="nofollow" href="{$link->getPageLink('history.php', true)}" title="{l s='Your Account' mod='blockuserinfo'}">{l s='My Account' mod='blockuserinfo'}</a> 
+                                | 
+                                <span>{$cookie->customer_firstname|escape:'htmlall':'UTF-8'} {$cookie->customer_lastname|escape:'htmlall':'UTF-8'}</span>
+                                (<a rel="nofollow" href="{$link->getPageLink('index.php')}?mylogout" title="{l s='Log me out' mod='blockuserinfo'}">{l s='Log out' mod='blockuserinfo'}</a>)
+
+                            {else}
+                                {if $page_name!='authentication'}
+                                    <a rel="nofollow" id="login_link" class="fancybox login_link" href="#login_modal_panel">{l s='Log in | Signup' mod='blockuserinfo'}</a>
+                                {/if}
+                            {/if}
+					<!-- <img alt="my account" sytle="float:right" src="imageN/my-acnt.png" width="24px" height="35px"/> -->
 				</div>
 			</a>
-		{/if}
+	
 		</div>
 		<div id="headphone" class="clearfix" style="float:right">
-		{*<div style="text-align: right; float: left; padding-top: 11px;color:#939393">YOUR<br/>SHOPPING BAG</div>*}
-		{if !$PS_CATALOG_MODE}
-			<a rel="nofollow" id="lnk_shopping_bag" class="lnk_shopping_bag" href="{$link->getPageLink("$order_process.php", true)}" >
+		
+	
+			<a rel="nofollow" id="" class="" href="" >
 				<div style="width:80px" class="clearfix">
-					<div class="sbagtxt">
-						CONTACT US {if $cart_qties > 0}({$cart_qties}){/if}
-					</div>
+					<a href="http://indusdiva.local/contact-us.php">CONTACT US</a>
+					<!-- <div class="sbagtxt">
+						CONTACT US 
+					</div> -->
 					<img alt="headphone" sytle="float:right" src="imageN/headph.png" width="24px" height="35px"/>
 				</div>
 			</a>
-		{/if}
+	
 		</div>
 	</div>
 	{if $ajax_allowed}

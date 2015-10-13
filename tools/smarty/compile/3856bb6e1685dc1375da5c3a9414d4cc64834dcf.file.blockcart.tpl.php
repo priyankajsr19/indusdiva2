@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2015-10-07 13:42:38
+<?php /* Smarty version Smarty-3.0.7, created on 2015-10-07 14:49:36
          compiled from "C:\xampp\htdocs\indusdiva2/themes/violettheme/modules/blockcart/blockcart.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:19985614d3f6c344a0-60843290%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:253945614e3a8b50ff2-41953717%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '19985614d3f6c344a0-60843290',
+  'nocache_hash' => '253945614e3a8b50ff2-41953717',
   'function' => 
   array (
   ),

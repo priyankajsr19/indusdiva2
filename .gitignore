@@ -1,0 +1,8 @@
+tools/smarty/compile
+img/*
+themes/violettheme/cache
+admin12/import/*
+admin12/product-uploads/*
+themes/violettheme/img/*
+tools/geoip/GeoLiteCity.dat
+admin12/amazon/xmlfeeds
