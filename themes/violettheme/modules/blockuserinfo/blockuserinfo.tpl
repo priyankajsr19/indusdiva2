@@ -108,16 +108,17 @@
 	{/literal}
 	
 	<div id="header_nav" class="clearfix"  >
-		<div id="shopping-right"> 
-		<div id="shopping-bag" class="clearfix" style="float:right">
+		<div id="shopping-right" style="border-right:1px solid black;"> 
+		<div id="shopping-bag" class="clearfix" style="width:90px;">
 		{*<div style="text-align: right; float: left; padding-top: 11px;color:#939393">YOUR<br/>SHOPPING BAG</div>*}
 		{if !$PS_CATALOG_MODE}
 			<a rel="nofollow" id="lnk_shopping_bag" class="lnk_shopping_bag" href="{$link->getPageLink("$order_process.php", true)}" >
 				<div  class="clearfix">
-					<div class="sbagtxt">
-						MY BAG {if $cart_qties > 0}({$cart_qties}){/if}
+					<p><img alt="shopping bag" src="imageN/bag.png" width="24px" height="35px"/></p>
+					<div class="sbagtxt text-center">
+						<p>MY BAG </p>{if $cart_qties > 0}({$cart_qties}){/if}
 					</div>
-					<img alt="shopping bag" sytle="float:right" src="imageN/bag.png" width="24px" height="35px"/>
+					
 				</div>
 			</a>
 		{/if}
@@ -139,6 +140,8 @@
 		
 
 		<div id="curtxt">
+			<p><img alt="currency" sytle="float:right" src="imageN/india.png" width="24px" height="35px"/></p>
+
 			 {include file="$tpl_dir./currency-change.tpl"}
 			 
 			 		</div>
@@ -159,11 +162,12 @@
 		
 		
 			<a rel="nofollow" id="" class="" href="" >
-				<div style="width:80px" class="clearfix">
+				<div style="width:90px" class="clearfix">
 					<!-- <div class="sbagtxt">
 						LogIn/signUp
 					</div> -->
 					<!-- <a rel="nofollow" id="login_link" class="fancybox login_link" href="#login_modal_panel">Log in | Signup</a> -->
+					<p><img alt="my account" sytle="float:right" src="imageN/my-acnt.png" width="24px" height="35px"/></p> 
 					{if $cookie->isLogged()}
                                 <a rel="nofollow" href="{$link->getPageLink('idpoints.php', true)}" title="{l s='My ClubDiva Coins'}">{$balance_points} Coins</a> 
                                 |
@@ -174,10 +178,10 @@
 
                             {else}
                                 {if $page_name!='authentication'}
-                                    <a rel="nofollow" id="login_link" class="fancybox login_link" href="#login_modal_panel">{l s='Log in | Signup' mod='blockuserinfo'}</a>
+                                  <p>  <a rel="nofollow" id="login_link" class="fancybox login_link" href="#login_modal_panel">{l s='Log in | Signup' mod='blockuserinfo'}</a></p>
                                 {/if}
                             {/if}
-					<!-- <img alt="my account" sytle="float:right" src="imageN/my-acnt.png" width="24px" height="35px"/> -->
+					
 				</div>
 			</a>
 	
@@ -186,12 +190,13 @@
 		
 	
 			<a rel="nofollow" id="" class="" href="" >
-				<div style="width:80px" class="clearfix">
-					<a href="http://indusdiva.local/contact-us.php">CONTACT US</a>
+				<div style="width:90px" class="clearfix">
+					
 					<!-- <div class="sbagtxt">
 						CONTACT US 
 					</div> -->
-					<img alt="headphone" sytle="float:right" src="imageN/headph.png" width="24px" height="35px"/>
+					<p><img alt="headphone" sytle="float:right" src="imageN/headph.png" width="24px" height="35px"/></p>
+					<p><a href="http://indusdiva.local/contact-us.php">CONTACT US</a></p>
 				</div>
 			</a>
 	
